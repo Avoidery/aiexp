@@ -1,4 +1,4 @@
-# Guess the Green Square Game
+# Guess the horse
 
 ## Overview
 This is a simple interactive game built with HTML, CSS, and JavaScript. The game is designed to teach basic programming concepts in a fun and engaging way.
