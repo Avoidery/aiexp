@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guess the horse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Guess the horse</h1>
+    <table id="row" class="row" aria-hidden="false">
+      <tr>
+        <td class="square" data-index="0"><img src="stand.jpg" alt="horse standing"></td>
+        <td class="square" data-index="1"><img src="stand.jpg" alt="horse standing"></td>
+        <td class="square" data-index="2"><img src="stand.jpg" alt="horse standing"></td>
+      </tr>
+    </table>
+    <p class="instructions">Welcome to the Guess the Green Square game! Here's how to play:</p>
+    <ul class="instructions">
+      <li>All squares start with a standing horse image.</li>
+      <li>Click on any square to make your guess.</li>
+      <li>If you guess the correct square, the horse will jump!</li>
+      <li>If you guess wrong, the horse will lay down.</li>
+      <li>The game resets after 2 seconds, and you can try again.</li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
