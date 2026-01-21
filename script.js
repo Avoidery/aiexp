@@ -15,26 +15,25 @@ function pickRandomSquare() {
   active = Math.floor(Math.random() * squares.length);
 }
 
+function startCooldown() {
+  squares.forEach(square => square.classList.add('cooldown'));
+  setTimeout(endCooldown, 2000);
+}
+
+function endCooldown() {
+  showAllStand();
+  pickRandomSquare();
+  squares.forEach(square => square.classList.remove('cooldown'));
+}
+
 // click to guess
 squares.forEach((s, i) => {
   s.onclick = () => {
     if (s.classList.contains('cooldown')) return; // Ignore clicks during cooldown
 
-    if (i === active) {
-      const img = s.firstElementChild;
-      img.src = 'jump.jpg'; // Correct guess,
-    } else {
-      const img = s.firstElementChild;
-      img.src = 'rest.jpg'; // Wrong guess
-    }
+    s.firstElementChild.src = (i === active) ? 'jump.jpg' : 'rest.jpg';
 
-    squares.forEach(square => square.classList.add('cooldown')); // Add cooldown class
-
-    setTimeout(() => {
-      showAllStand();
-      pickRandomSquare();
-      squares.forEach(square => square.classList.remove('cooldown')); // Remove cooldown class
-    }, 2000);
+    startCooldown();
   };
 });
 
