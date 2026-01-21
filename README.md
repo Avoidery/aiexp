@@ -1,5 +1,7 @@
 # Guess the horse
 
+🎮 **[Play the game here!](https://avoidery.github.io/aiexp/)**
+
 ## Overview
 This is a simple interactive game built with HTML, CSS, and JavaScript. The game is designed to teach basic programming concepts in a fun and engaging way.
 
@@ -34,3 +36,13 @@ This game introduces the following programming concepts:
 - Logic and state management: Implementing game rules and managing game states.
 
 Feel free to modify the code to experiment and learn more about how the game works!
+
+## Publishing
+This app is automatically published to GitHub Pages via GitHub Actions. Any changes pushed to the `main` branch will be automatically deployed.
+
+### How to enable GitHub Pages (for repository owners):
+1. Go to your repository Settings → Pages
+2. Under "Build and deployment", set Source to "GitHub Actions"
+3. The workflow will automatically deploy the site on the next push to main
+
+The live app will be available at: `https://avoidery.github.io/aiexp/`
